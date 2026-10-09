@@ -18,5 +18,7 @@ const double INR_Parduoti  = 107.8546;
 //Pagrindinis meniu
 cout << "MENIU" << endl;
 cout << "1. Valiutos kurso palyginimas su euru." << endl;
-cout <<"2. Valiutos pirkimas (EUR --> pasirinkta valiuta)."
-cout <<""
+cout <<"2. Valiutos pirkimas (EUR --> pasirinkta valiuta)." << endl;
+cout <<"3. Valiutos pardavimas(pasirinkta valiuta --> EUR.)" << endl;
+cout << "Išeiti." << endl;
+
