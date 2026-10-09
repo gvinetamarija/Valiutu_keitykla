@@ -1,7 +1,8 @@
 #include <iostream>
 using namespace std;
 
-int main()
+int main(){
+
  //valiutu kursai
 const double GBP_Bendras   = 0.8729;
 const double GBP_Pirkti    = 0.8600;
@@ -19,6 +20,19 @@ const double INR_Parduoti  = 107.8546;
 cout << "MENIU" << endl;
 cout << "1. Valiutos kurso palyginimas su euru." << endl;
 cout <<"2. Valiutos pirkimas (EUR --> pasirinkta valiuta)." << endl;
-cout <<"3. Valiutos pardavimas(pasirinkta valiuta --> EUR.)" << endl;
-cout << "Išeiti." << endl;
+cout <<"3. Valiutos pardavimas(pasirinkta valiuta --> EUR)." << endl;
+cout << "4. Išeiti." << endl;
 
+int pasirinkimas;
+cout <<"Pasirinkite veiksmą: ";
+cin >> pasirinkimas;
+
+//Valiutos meniu
+cout <<"Pasirinkite valiuta:" << endl;
+cout <<"1 - GBP" << endl;
+cout <<"2 - USD" << endl;
+cout <<"3 - INR" << endl;
+cout << "Jusu pasirinkimas: ";
+
+int valiuta;
+cin >> valiuta
