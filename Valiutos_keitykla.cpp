@@ -27,6 +27,14 @@ int pasirinkimas;
 cout <<"Pasirinkite veiksmą: ";
 cin >> pasirinkimas;
 
+//Iskarto netinkamus variantus pazymiu
+if (pasirinkimas ==4){
+    cout << "Viso gero." << endl;
+}
+if (pasirinkimas < 1 || veiksmas > 4){
+    cout << "Neteisingas pasirinkimmas." << endl;
+}
+
 //Valiutos meniu
 cout <<"Pasirinkite valiuta:" << endl;
 cout <<"1 - GBP" << endl;
@@ -36,3 +44,28 @@ cout << "Jusu pasirinkimas: ";
 
 int valiuta;
 cin >> valiuta
+
+if(valiuta < 1 || valiuta > 3) {
+    cout << "Klaida: neteisingas valiutos pasirinkimas." << endl;
+}
+
+// 1 Pasirinkimas is meniu su visom valiutom
+if(pasirinkimas == 1){
+    if(valiuta ==1){
+        cout << "1 EUR = " << GBP_Bendras << "GBP" << endl;
+        cout << "1 GBP = " << 1/ GBP_Bendras << "EUR" << endl;
+    }
+    else if(valiuta == 2){
+        cout << "1 EUR = " << USD_Bendras << "USD" << endl;
+        cout << "1 USD = " << USD_Bendras << "EUR" << endl;
+    }
+    else {
+        cout << "1 EUR = " << INR_Bendras << "INR" << endl;
+        cout << "1 INR =" << 1 / INR_Bendras << "EUR" << endl;
+    }
+
+    // 2 pasirinkimas - pirkimas
+    
+}
+
+
