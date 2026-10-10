@@ -31,7 +31,7 @@ cin >> pasirinkimas;
 if (pasirinkimas ==4){
     cout << "Viso gero." << endl;
 }
-if (pasirinkimas < 1 || veiksmas > 4){
+if (pasirinkimas < 1 || pasirinkimas > 4){
     cout << "Neteisingas pasirinkimmas." << endl;
 }
 
@@ -43,7 +43,7 @@ cout <<"3 - INR" << endl;
 cout << "Jusu pasirinkimas: ";
 
 int valiuta;
-cin >> valiuta
+cin >> valiuta;
 
 if(valiuta < 1 || valiuta > 3) {
     cout << "Klaida: neteisingas valiutos pasirinkimas." << endl;
@@ -57,15 +57,43 @@ if(pasirinkimas == 1){
     }
     else if(valiuta == 2){
         cout << "1 EUR = " << USD_Bendras << "USD" << endl;
-        cout << "1 USD = " << USD_Bendras << "EUR" << endl;
+        cout << "1 USD = " << 1/USD_Bendras << "EUR" << endl;
     }
     else {
         cout << "1 EUR = " << INR_Bendras << "INR" << endl;
         cout << "1 INR =" << 1 / INR_Bendras << "EUR" << endl;
-    }
+    }}
 
     // 2 pasirinkimas - pirkimas
-    
+else if(pasirinkimas == 2) {
+    cout << "Iveskite euru suma: ";
+    double suma;
+    double rezultatas;
+    cin >> suma;
+
+    if (suma <= 0) {
+        cout << "Iveskite teigiama suma." << endl;
+    }
+
+    if (valiuta == 1) {
+        rezultatas = suma * GBP_Pirkti;
+        cout << suma << "EUR = " << rezultatas <<"GBP" <<endl;
+    }
+    else if (valiuta ==2) {
+        rezultatas = suma *USD_Pirkti;
+        cout << suma << "EUR = " << rezultatas << "USD" << endl;
+        }
+
+        else (valiuta == 3){
+            rezultatas = suma * INR_Pirkti;
+            cout << suma << "EUR = " << rezultatas << "INR" << endl;
+        }
+
+        
+
+}
+
+}
 }
 
 
