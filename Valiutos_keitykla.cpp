@@ -16,6 +16,10 @@ const double INR_Bendras   = 104.6918;
 const double INR_Pirkti    = 101.3862;
 const double INR_Parduoti  = 107.8546;
 
+//Visi skaiciai bus rodomi su 2 skaitmenimis po kablelio.
+cout << fixed;
+cout.precision(2);
+
 //Pagrindinis meniu
 cout << "MENIU" << endl;
 cout << "1. Valiutos kurso palyginimas su euru." << endl;
@@ -46,10 +50,12 @@ cout << "Jusu pasirinkimas: ";
 
 int valiuta;
 cin >> valiuta;
+double suma;
+double rezultatas;
 
 if(valiuta < 1 || valiuta > 3) {
     cout << "Klaida: neteisingas valiutos pasirinkimas." << endl;
-    return ; 0
+    return 0;
 }
 
 // 1 Pasirinkimas is meniu su visom valiutom
@@ -62,7 +68,7 @@ if(pasirinkimas == 1){
         cout << "1 EUR = " << USD_Bendras << "USD" << endl;
         cout << "1 USD = " << 1/USD_Bendras << "EUR" << endl;
     }
-    else {
+    else{
         cout << "1 EUR = " << INR_Bendras << "INR" << endl;
         cout << "1 INR =" << 1 / INR_Bendras << "EUR" << endl;
     }}
@@ -70,8 +76,7 @@ if(pasirinkimas == 1){
     // 2 pasirinkimas - pirkimas
 else if(pasirinkimas == 2) {
     cout << "Iveskite euru suma: ";
-    double suma;
-    double rezultatas;
+   
     cin >> suma;
 
     if (suma <= 0) {
@@ -88,7 +93,7 @@ else if(pasirinkimas == 2) {
         cout << suma << "EUR = " << rezultatas << "USD" << endl;
         }
 
-        else (valiuta == 3){
+        else{
             rezultatas = suma * INR_Pirkti;
             cout << suma << "EUR = " << rezultatas << "INR" << endl;
         }
@@ -111,7 +116,7 @@ else if(pasirinkimas == 3){
         rezultatas = suma / USD_Parduoti;
         cout << suma << "USD = " << rezultatas <<" EUR "<< endl;
     }
-    else{
+    else {
         rezultatas = suma / INR_Parduoti;
         cout << suma << "INR = " << rezultatas << "EUR" << endl;
     }
