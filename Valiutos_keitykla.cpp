@@ -30,9 +30,11 @@ cin >> pasirinkimas;
 //Iskarto netinkamus variantus pazymiu
 if (pasirinkimas ==4){
     cout << "Viso gero." << endl;
+    return 0;
 }
 if (pasirinkimas < 1 || pasirinkimas > 4){
     cout << "Neteisingas pasirinkimmas." << endl;
+    return 0;
 }
 
 //Valiutos meniu
@@ -47,6 +49,7 @@ cin >> valiuta;
 
 if(valiuta < 1 || valiuta > 3) {
     cout << "Klaida: neteisingas valiutos pasirinkimas." << endl;
+    return ; 0
 }
 
 // 1 Pasirinkimas is meniu su visom valiutom
@@ -73,6 +76,7 @@ else if(pasirinkimas == 2) {
 
     if (suma <= 0) {
         cout << "Iveskite teigiama suma." << endl;
+        return 0;
     }
 
     if (valiuta == 1) {
@@ -88,12 +92,32 @@ else if(pasirinkimas == 2) {
             rezultatas = suma * INR_Pirkti;
             cout << suma << "EUR = " << rezultatas << "INR" << endl;
         }
+}
+    // Pardavimas
+else if(pasirinkimas == 3){
+    cout << "Iveskite parduodamos valiutos kieki: " ;
+    cin >> suma;
 
-        
-
+    if(suma <= 0){
+        cout << "Klaida, turi buti teigiamas skaicius" <<endl;
+        return 0;
+    }
+    
+    if(valiuta ==1){
+        rezultatas = suma / GBP_Parduoti;
+        cout << suma << "GBP = " <<rezultatas << "EUR" << endl;
+    }
+    else if(valiuta == 2 ){
+        rezultatas = suma / USD_Parduoti;
+        cout << suma << "USD = " << rezultatas <<" EUR "<< endl;
+    }
+    else{
+        rezultatas = suma / INR_Parduoti;
+        cout << suma << "INR = " << rezultatas << "EUR" << endl;
+    }
+}
+return 0;
 }
 
-}
-}
 
 
