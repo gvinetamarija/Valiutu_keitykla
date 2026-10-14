@@ -19,15 +19,18 @@ const double INR_Parduoti  = 107.8546;
 //Visi skaiciai bus rodomi su 2 skaitmenimis po kablelio.
 cout << fixed;
 cout.precision(2);
-
+int pasirinkimas;
 //Pagrindinis meniu
+do{
 cout << "MENIU" << endl;
 cout << "1. Valiutos kurso palyginimas su euru." << endl;
 cout <<"2. Valiutos pirkimas (EUR --> pasirinkta valiuta)." << endl;
 cout <<"3. Valiutos pardavimas(pasirinkta valiuta --> EUR)." << endl;
 cout << "4. Išeiti." << endl;
 
-int pasirinkimas;
+
+
+
 cout <<"Pasirinkite veiksmą: ";
 cin >> pasirinkimas;
 
@@ -121,6 +124,7 @@ else if(pasirinkimas == 3){
         cout << suma << "INR = " << rezultatas << "EUR" << endl;
     }
 }
+} while(pasirinkimas !=4);
 return 0;
 }
 
